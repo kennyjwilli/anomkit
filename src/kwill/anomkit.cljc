@@ -1,5 +1,8 @@
 (ns kwill.anomkit
-  (:refer-clojure :exclude [some]))
+  "Utility functions for working with anomaly maps."
+  (:refer-clojure :exclude [some])
+  (:require
+    [kwill.anomkit.key-groups :as kgroups]))
 
 (def categories
   "Set of all anomaly categories."
@@ -22,6 +25,16 @@
   "Returns the anomaly message of `x`."
   [x]
   (:cognitect.anomalies/message x))
+
+(defn with-public-ks
+  "Adds `ks` to the set of public keys for `anom-data`."
+  [anom-data ks]
+  (kgroups/with-keys anom-data ::public-keys ks))
+
+(defn public-data
+  "Returns a map of the public data from `anom-data`."
+  [anom-data]
+  (kgroups/select anom-data ::public-keys))
 
 (defn anomaly?
   "Returns true if `x` is an anomaly."
