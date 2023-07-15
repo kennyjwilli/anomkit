@@ -3,7 +3,7 @@
 ## Installation 
 
 ```clojure
-dev.kwill/anomkit {:mvn/version "1.0.1"}
+dev.kwill/anomkit {:mvn/version "1.0.3"}
 ```
 
 ## License
