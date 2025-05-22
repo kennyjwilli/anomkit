@@ -269,7 +269,8 @@
    501 :cognitect.anomalies/unsupported
    503 :cognitect.anomalies/busy
    504 :cognitect.anomalies/unavailable
-   505 :cognitect.anomalies/unsupported})
+   505 :cognitect.anomalies/unsupported
+   529 :cognitect.anomalies/busy})
 
 (def category->http-status
   "A default mapping from anomaly category to an HTTP status code. Note that a
