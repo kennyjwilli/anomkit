@@ -41,6 +41,7 @@
   (b/delete {:path "target"})
   (let [opts (jar-opts opts)]
     (b/write-pom opts)
+    (b/copy-dir {:src-dirs ["resources" "src"] :target-dir class-dir})
     (b/jar opts))
   opts)
 
