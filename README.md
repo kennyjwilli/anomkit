@@ -5,7 +5,7 @@ A Clojure(Script) library providing utilities for working with [Cognitect's anom
 ## Installation 
 
 ```clojure
-dev.kwill/anomkit {:mvn/version "1.0.3"}
+dev.kwill/anomkit {:mvn/version "1.0.6"}
 ```
 
 ## Overview
